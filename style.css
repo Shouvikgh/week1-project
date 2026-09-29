@@ -87,7 +87,7 @@ body {
     top: 190px;
     left: 20px;
 }
-button{
+.shop{
     position:absolute;
     top:150px;
     left:170px;
@@ -98,7 +98,7 @@ button{
     border-radius:20px;
 
 }
-button:hover{
+.shop:hover{
     background-color:rgb(244, 144, 13);
     color:black;
     width:120px;
@@ -107,6 +107,14 @@ button:hover{
     color:rgb(244, 144, 13);
 
 }
-
+#close{
+    position:absolute;
+    top: 3px;
+    left: 0.5px;
+}
+.shoe:hover{
+    transform: scale(2);
+    transition: 0.5s;
+}
 
 
