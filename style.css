@@ -90,7 +90,7 @@ body {
 button{
     position:absolute;
     top:150px;
-    left:190px;
+    left:170px;
     height:40 px;
     width:100px;
     background-color:white;
@@ -101,8 +101,12 @@ button{
 button:hover{
     background-color:rgb(244, 144, 13);
     color:black;
+    width:120px;
 }
+.text3:hover{
+    color:rgb(244, 144, 13);
 
+}
 
 
 
