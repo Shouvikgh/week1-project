@@ -40,13 +40,34 @@ if (form) {
         alert("Your order has been placed successfully");
     })
 }
-//Dynamic Content
-let config={
+//Dynamic Content and JavaScript object parsed from JSON with Error Handling
+let configText=`{
+    "headline": "Run Faster",
+    "tail": "Go further",
+    "description": "Aero Run — 180 g cushioned racer with free returns. Ends tonight",
+    "cta_text": "Shop now"
+}`;
+let fallbackConfig={
     headline: "Run Faster",
     tail: "Go further",
     description: "Aero Run — 180 g cushioned racer with free returns. Ends tonight",
-    cta_text: "Shop now"
+    cta_text: "Shop Now"
 }
+function loadConfig(){
+    try{
+        const parsed = JSON.parse(configText);
+        if(!parsed.headline || !parsed.cta_text){
+            throw new Error ("headline or cta text is missing");
+        }
+        return parsed;
+    }
+    catch(err){
+        log("error",err.message);
+        return fallbackConfig;
+    }
+}
+const config= loadConfig();
+
 if(heading){
     heading.textContent=config.headline;
 }
@@ -60,9 +81,8 @@ if(shop_text){
     shop_text.textContent=config.cta_text;
 }
 //click tracking
-function log(eventName){
-    console.log(eventName);
-    console.log(new Date().toLocaleTimeString());
+function log(eventName,message=""){
+    console.log(eventName,message,new Date().toLocaleTimeString());
 }
 if(shop_text){
     shop_text.addEventListener("click",()=>{
