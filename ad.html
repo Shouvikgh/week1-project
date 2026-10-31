@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Preview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="ad.css">
+</head>
+<body>
+    <div class="container" id="ad">
+        <div class="box1">
+            <div class="shoe" id="shoe"></div>
+            <div class="box1-text">
+                <p>30%</p>
+                <p>Sale today</p>
+                <button id="see_more">See More</button>
+            </div>
+            <div class="cross">
+                <button id="close" aria-label="Close Ad">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box2">
+            <p class="text1"><b id="headline">Loading...</b></p>
+            <p class="text2"><b id="tail"></b></p>
+            <p class="text3" id="description"></p>
+        </div>
+        <a class="shop" id="cta" href="#" target="_blank" rel="noopener">Shop Now</a>
+    </div>
+
+    <div id="closed-note" hidden>
+        <p>If you want to see again then click on SHOW AGAIN button</p>
+        <button id="show-again">SHOW AGAIN</button>
+    </div>
+
+    <p id="ad-message" role="status"></p>
+    <script src="ad.js"></script>
+</body>
+</html>
