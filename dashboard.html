@@ -32,17 +32,39 @@
             <label>Click URL
                 <input id="f-click" type="url" placeholder="https://example.com">
             </label>
+
+            <h3>Creative (the ad)</h3>
+            <label>Headline
+                <input id="f-headline" type="text" required>
+            </label>
+            <label>Tail text
+                <input id="f-tail" type="text">
+            </label>
+            <label>Description
+                <input id="f-description" type="text">
+            </label>
+            <label>Button text
+                <input id="f-cta" type="text" value="Shop Now">
+            </label>
+            <label>Image URL (leave empty to use shoes.png)
+                <input id="f-image" type="text">
+            </label>
+
             <button type="submit">Save</button>
             <button type="button" id="cancel-form">Cancel</button>
         </form>
 
         <section id="details" hidden>
             <h2 id="d-name"></h2>
+            <p>Creative: <span id="d-creative"></span></p>
             <p>Status: <span id="d-status"></span></p>
             <p>Budget: $<span id="d-budget"></span></p>
             <p>Click URL: <span id="d-click"></span></p>
+            <p>Impressions: <span id="d-impressions">0</span> | Clicks: <span id="d-clicks">0</span></p>
             <button id="preview-btn">Preview Creative</button>
+            <button id="refresh-btn">Refresh stats</button>
             <button id="delete-btn">Delete Campaign</button>
+            <iframe id="preview-frame" title="Ad preview" width="340" height="320" hidden></iframe>
         </section>
     </main>
     <script src="dashboard.js"></script>

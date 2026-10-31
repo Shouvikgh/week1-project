@@ -1,0 +1,94 @@
+* { margin: 0; box-sizing: border-box; }
+
+body {
+    background-color: midnightblue;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    max-width: 100%;
+    height: 125px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    transition: height 0.5s;
+}
+.container.open { height: 250px; }
+
+.box1 {
+    position: relative;
+    width: 100%;
+    height: 125px;
+    background-color: rgb(13, 244, 194);
+}
+
+.shoe {
+    height: 125px;
+    width: 130px;
+    background-image: url("shoes.png");
+    background-size: cover;
+}
+.shoe:hover { transform: scale(2); transition: 0.5s; }
+
+.box1-text {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: animate 0.5s linear 1s infinite alternate;
+}
+@keyframes animate {
+    from { background-color: black; color: white; }
+    to { background-color: white; color: black; }
+}
+
+.cross { position: absolute; left: 270px; top: 5px; }
+#close { position: absolute; top: 3px; left: 0.5px; }
+
+#see_more {
+    height: 20px;
+    width: 80px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+.box2 { background-color: azure; height: 125px; }
+.text1 { position: absolute; top: 150px; left: 20px; }
+.text2 { position: absolute; top: 170px; left: 20px; }
+.text3 { position: absolute; top: 190px; left: 20px; right: 20px; }
+.text3:hover { color: rgb(244, 144, 13); }
+
+.shop {
+    position: absolute;
+    top: 150px;
+    left: 170px;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: 1px solid #767676;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.shop:hover { background-color: rgb(244, 144, 13); width: 120px; }
+
+#closed-note p, #ad-message { color: white; margin-bottom: 6px; }
+#ad-message { font-size: 12px; margin-top: 8px; }
+#show-again { color: black; }
