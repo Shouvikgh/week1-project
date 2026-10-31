@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <main class="page">
+        <h1>Campaigns</h1>
+        <p id="message" role="status">Loading...</p>
+
+        <ul id="campaign-list"></ul>
+
+        <button id="show-form">Create Campaign</button>
+
+        <form id="campaign-form" hidden>
+            <h2>New campaign</h2>
+            <label>Name
+                <input id="f-name" type="text" required>
+            </label>
+            <label>Status
+                <select id="f-status">
+                    <option value="active">Active</option>
+                    <option value="paused">Paused</option>
+                </select>
+            </label>
+            <label>Budget
+                <input id="f-budget" type="number" min="0" value="0">
+            </label>
+            <label>Click URL
+                <input id="f-click" type="url" placeholder="https://example.com">
+            </label>
+            <button type="submit">Save</button>
+            <button type="button" id="cancel-form">Cancel</button>
+        </form>
+
+        <section id="details" hidden>
+            <h2 id="d-name"></h2>
+            <p>Status: <span id="d-status"></span></p>
+            <p>Budget: $<span id="d-budget"></span></p>
+            <p>Click URL: <span id="d-click"></span></p>
+            <button id="preview-btn">Preview Creative</button>
+            <button id="delete-btn">Delete Campaign</button>
+        </section>
+    </main>
+    <script src="dashboard.js"></script>
+</body>
+</html>
