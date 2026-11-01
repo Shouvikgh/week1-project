@@ -1,5 +1,3 @@
-const API_URL = "http://localhost:3000";
-
 const message = document.querySelector("#message");
 const list = document.querySelector("#campaign-list");
 const showFormBtn = document.querySelector("#show-form");
