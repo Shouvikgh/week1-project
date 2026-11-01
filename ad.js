@@ -1,5 +1,3 @@
-const API_URL = "http://localhost:3000";
-
 const params = new URLSearchParams(window.location.search);
 const creativeId = params.get("creative");
 
